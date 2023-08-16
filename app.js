@@ -24,17 +24,15 @@ function formatDate(timestamp) {
   
   function forecastDays(timestamp) {
     let forecastDate = new Date(timestamp * 1000);
-    let forecastDay = forecastDate.getUTCDay(); // Get the UTC day index
-
-    // Adjust the index to start from Monday (1) instead of Sunday (0)
-    let adjustedDay = (forecastDay + 6) % 7;
+    let forecastDay = forecastDate.getUTCDay(); 
+      let adjustedDay = (forecastDay + 6) % 7;
 
     let days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
 
     return days[adjustedDay];
 }
 
-  //
+  
   function displayForecast(response) {
     let forecast = response.data.daily;
   
@@ -123,7 +121,7 @@ function formatDate(timestamp) {
   function dispalyFahrenheitTemp(event) {
     event.preventDefault();
     let tempElement = document.querySelector("#temp");
-    //remove active class form celsius link
+    
     celsiusiLink.classList.remove("active");
     fahrenheitLink.classList.add("active");
   
@@ -135,7 +133,7 @@ function formatDate(timestamp) {
     event.preventDefault();
     let tempElement = document.querySelector("#temp");
   
-    //add active class form celsius link
+
     celsiusiLink.classList.add("active");
     fahrenheitLink.classList.remove("active");
   
