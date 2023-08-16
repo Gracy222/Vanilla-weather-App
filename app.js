@@ -140,4 +140,4 @@ fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
 const celsiusLink = document.getElementById("celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
-search("Abeokuta");
+search("Abuja");
