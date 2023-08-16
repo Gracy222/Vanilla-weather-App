@@ -5,10 +5,10 @@
   .edge {
     margin-top: 20px;
     margin-bottom: 20px;
-    border: solid 1px rgb(214, 250, 210);
+    border: solid 1px rgb(227, 252, 224);
     border-radius: 15px;
     padding: 20px;
-    background-color: rgb(170, 250, 225);
+    background-color: rgb(234, 252, 247);
   }
   
   .edge-in {
@@ -20,7 +20,7 @@
   }
   
   .btn {
-    border: solid 1px rgb(215, 246, 199);
+    border: solid 1px rgb(176, 196, 192);
   }
   
   .city {
