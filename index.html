@@ -2,100 +2,82 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Weather App</title>
+    
     <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
       crossorigin="anonymous"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap"
-      rel="stylesheet"
-    />
-    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="style.css" />
-    <script
-      src="https://kit.fontawesome.com/928074ee23.js"
-      crossorigin="anonymous"
-    ></script>
+    <title>Weather App</title>
   </head>
   <body>
-    <div class="container edge">
-      <form id="search-form">
-        <div class="form-row align-items-center">
-          <div class="col-11">
-            <input
-              type="search"
-              class="form-control"
-              id="search-weather"
-              placeholder="Search for a city..."
-              autofocus="on"
-              autocomplete="off"
-            />
-          </div>
-          <div class="col-1">
-            <input type="submit" value="Search" class="btn btn-primary w-100" />
-          </div>
-        </div>
-      </form>
-      <div class="container edge-in">
-        <div class="row">
-          <div class="col-6">
-            <div class="d-flex weather-temperature">
-              <div>
-                <h1 class="city" id="cur-city">Please enter a city</h1>
-                <img src="" alt="Clear" id="icon" class="float-left" />
-                <strong class="main-temp" id="temp"></strong
-                ><span class="units"
-                  ><a href="#" id="celsius-link" class="active celLink"> °C</a>
-                  |<a href="#" id="fahrenheit-link" class="fahLink">
-                    °F</a
-                  ></span
-                >
-              </div>
+    <div class="container">
+      <div class="weather-app-wrap">
+      <div class="weather-app">
+        <form id="search-form" class="mb-3">
+          <div class="row">
+            <div class="col-9">
+              <input 
+                  type="search" 
+                  placeholder="search city..." 
+                  class="form-control"
+                  id="city-input"
+                  autocomplete="off"
+              />
             </div>
-            <h3 class="day-hour" id="cur-date"></h3>
-            <h3 class="description" id="weather-description"></h3>
+            <div class="col-3">
+            <input type="submit" value="search" class="btn btn-primary" />
+            </div>
           </div>
-          <div class="col">
-            <h3 class="other-descriptions">
-              Humidity: <span id="humidity"> </span>% <br />Wind:
-              <span id="wind"> </span> km/h
-            </h3>
-          </div>
-        </div>
-      </div>
-      <div class="weather-forecast" id="forecast">
-        <div class="row">
-          <div class="col-2">
-            <div class="weather-forecast-date">Tue</div>
-            <img
-              src="http://openweathermap.org/img/wn/01d@2x.png"
-              alt=""
-              width="50"
-            />
-            <div class="weather-forecast-temp">
-              <span class="weather-forecast-temp-max"></span>
-              <span class="weather-forecast-temp-min"></span>
+        </form>
+      <h1 id="city"></h1>
+      <ul>
+        <li> <span id="currentDate"></span></li>
+        <li id="desciption"></li>
+      </ul>
+      <div class="row">
+        <div class="col-6">
+          <div class="weather-temperature">
+          <span><img
+            src="https://openweathermap.org/img/wn/03d@2x.png"
+            alt="cloudy"
+            id="icon"
+            class="float-left"
+          />
+            <div class="float-left">
+              <strong id="temperature"></strong>
+              <span class="units" style="display: inline;"
+               > <a href="#" id="celsius-link" class="active">°C </a>| 
+               <a href="#" id="fahrenheit-link" class="fahrenheit">°F</a> </span>
+            </span>
             </div>
           </div>
         </div>
+        <div class="col-6">
+          <ul>
+            
+            <li>humidity: <span id="humidity"></span>%</li>
+            <li>Wind: <span id="wind"></span> km/h</li>
+          </ul>
+        </div>
       </div>
-      <hr />
+      <div class="weather-forecast" id="forecast"></div>
     </div>
-    <p class="name">
-      source code by Grace Bamidele
-      <a
-        class="src-link"
-        href="https://github.com/Gracy222/Vanilla-weather-App"
-        target="_blank"
-        >Open-sourced on GitHub.
-      </a>
-    </p>
+    <div id="forecast-container"></div>
+    <div class="code-owner">
+      <a href="https://github.com/Gracy222/Vanilla-weather-App" target="_blank"
+        >Open-source code</a
+      >
+      by Grace Bamidele
+    </div>
+     </div>
+     </div>
+    </div>
     <script src="app.js"></script>
   </body>
 </html>
