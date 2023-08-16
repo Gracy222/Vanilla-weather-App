@@ -28,8 +28,7 @@ function formatDay(timestamp) {
     "Wed",
     "Thu",
     "Fri",
-    "Sat",
-    "Sun"
+    "Sat"
   ];
 
 
@@ -140,4 +139,4 @@ fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
 const celsiusLink = document.getElementById("celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
-search("Abuja");
+search("Abeokuta");
