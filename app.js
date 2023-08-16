@@ -153,4 +153,4 @@ function formatDate(timestamp) {
   let celsiusiLink = document.querySelector("#celsius-link");
   celsiusiLink.addEventListener("click", dispalyCelsiusTemp);
   
-  searchForCity("Lagos");
+  searchForCity("Abeokuta");
